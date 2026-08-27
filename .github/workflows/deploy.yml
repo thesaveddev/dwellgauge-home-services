@@ -1,0 +1,183 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [master, main]
+    # Only deploy when source code or config changes (not docs/markdown)
+    paths:
+      - "src/**"
+      - "db/**"
+      - "data/**"
+      - "scripts/**"
+      - "next.config.ts"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - "postcss.config.mjs"
+
+  workflow_dispatch:
+    inputs:
+      skip_tests:
+        description: "Skip test suite (emergency deploy)"
+        required: false
+        default: false
+        type: boolean
+      run_migrations:
+        description: "Run database migrations before deploy"
+        required: false
+        default: true
+        type: boolean
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: "22"
+  VPS_HOST: ${{ secrets.VPS_HOST }}
+  VPS_USER: ${{ secrets.VPS_USER }}
+  APP_DIR: /var/www/dwellgauge
+
+jobs:
+  # ── Pre-deploy checks ────────────────────────────────────
+  precheck:
+    name: Pre-deploy checks
+    runs-on: ubuntu-latest
+    if: ${{ !inputs.skip_tests }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Tests
+        run: npm test -- --run
+
+      - name: Build
+        run: NODE_ENV=production npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://dwellgauge.com
+
+  # ── Deploy to VPS ────────────────────────────────────────
+  deploy:
+    name: Deploy to VPS
+    runs-on: ubuntu-latest
+    needs: [precheck]
+    if: always() && (needs.precheck.result == 'success' || inputs.skip_tests)
+    environment:
+      name: production
+      url: https://dwellgauge.com
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ env.VPS_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Sync source code to VPS
+        run: |
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            --exclude='node_modules' \
+            --exclude='.next' \
+            --exclude='.env' \
+            --exclude='.env.local' \
+            --exclude='.git' \
+            --exclude='data files/' \
+            --exclude='*.log' \
+            ./ ${{ env.VPS_USER }}@${{ env.VPS_HOST }}:${{ env.APP_DIR }}/
+
+      - name: Deploy on VPS
+        env:
+          SSH_KEY: ~/.ssh/deploy_key
+        run: |
+          ssh -i $SSH_KEY ${{ env.VPS_USER }}@${{ env.VPS_HOST }} << 'DEPLOY_SCRIPT'
+            set -euo pipefail
+            cd /var/www/dwellgauge
+
+            echo "→ Installing dependencies..."
+            npm ci --no-audit --no-fund
+
+            echo "→ Running migrations..."
+            source .db-credentials 2>/dev/null || true
+            if [[ -n "${DATABASE_URL:-}" ]]; then
+              for migration in db/migrations/*.sql; do
+                [[ -f "$migration" ]] && psql "$DATABASE_URL" -f "$migration" 2>/dev/null || true
+              done
+            fi
+
+            echo "→ Building production..."
+            NODE_ENV=production npm run build
+
+            echo "→ Restarting app..."
+            pm2 restart dwellgauge --update-env
+
+            echo "→ Waiting for app to start..."
+            sleep 5
+
+            echo "→ Health check..."
+            HEALTH=$(curl -s http://localhost:3000/api/health 2>/dev/null || echo '{"ok":false}')
+            if echo "$HEALTH" | grep -q '"ok":true'; then
+              echo "✅ Deploy successful — app is healthy"
+              echo "$HEALTH"
+            else
+              echo "⚠️  Health check failed, checking logs..."
+              pm2 logs dwellgauge --lines 20 --nostream
+              exit 1
+            fi
+          DEPLOY_SCRIPT
+
+      - name: Cleanup SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
+
+  # ── Post-deploy verification ─────────────────────────────
+  verify:
+    name: Post-deploy verification
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    steps:
+      - name: Wait for deployment to stabilize
+        run: sleep 15
+
+      - name: Verify production health
+        run: |
+          HEALTH=$(curl -sf https://dwellgauge.com/api/health 2>/dev/null || curl -sf http://${{ env.VPS_HOST }}:3000/api/health 2>/dev/null || echo '{"ok":false}')
+          echo "Health: $HEALTH"
+          if echo "$HEALTH" | grep -q '"ok":true'; then
+            echo "✅ Production verified"
+          else
+            echo "❌ Production health check failed"
+            exit 1
+          fi
+
+      - name: Verify key pages
+        run: |
+          for path in / /costs /licenses /about /robots.txt /sitemap.xml; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://dwellgauge.com${path}" 2>/dev/null || curl -s -o /dev/null -w "%{http_code}" "http://${{ env.VPS_HOST }}:3000${path}" 2>/dev/null || echo "000")
+            if [[ "$STATUS" == "200" ]]; then
+              echo "✅ $path → $STATUS"
+            else
+              echo "❌ $path → $STATUS"
+            fi
+          done
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "::error::Production deployment verification failed! Check the VPS logs."
+          # Add Slack/Discord/email notification here when ready:
+          # curl -X POST "${{ secrets.SLACK_WEBHOOK }}" \
+          #   -H 'Content-Type: application/json' \
+          #   -d '{"text":"❌ DwellGauge deploy failed — check GitHub Actions"}'

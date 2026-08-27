@@ -1,0 +1,99 @@
+name: Health Check
+
+on:
+  schedule:
+    # Every 6 hours
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  health:
+    name: Production Health Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check production health
+        id: health
+        env:
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'https://dwellgauge.com' }}
+        run: |
+          echo "Checking $SITE_URL ..."
+
+          # Health endpoint
+          HEALTH=$(curl -sf --max-time 15 "${SITE_URL}/api/health" 2>/dev/null || echo '{"ok":false}')
+          echo "Health: $HEALTH"
+
+          if echo "$HEALTH" | grep -q '"ok":true'; then
+            echo "status=healthy" >> "$GITHUB_OUTPUT"
+            echo "records=$(echo $HEALTH | grep -o '"licenseCount":[0-9]*' | cut -d: -f2)" >> "$GITHUB_OUTPUT"
+          else
+            echo "status=unhealthy" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check key pages
+        if: steps.health.outputs.status == 'healthy'
+        env:
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'https://dwellgauge.com' }}
+        run: |
+          FAILURES=0
+          for path in / /costs /licenses /about /robots.txt /sitemap.xml; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "${SITE_URL}${path}" 2>/dev/null || echo "000")
+            if [[ "$STATUS" == "200" ]]; then
+              echo "✅ $path → $STATUS"
+            else
+              echo "❌ $path → $STATUS"
+              FAILURES=$((FAILURES + 1))
+            fi
+          done
+
+          if [[ $FAILURES -gt 0 ]]; then
+            echo "::warning::$FAILURES pages returned non-200 status"
+          fi
+
+      - name: Check page performance
+        if: steps.health.outputs.status == 'healthy'
+        env:
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'https://dwellgauge.com' }}
+        run: |
+          # Measure response time
+          TIME=$(curl -sf -o /dev/null -w "%{time_total}" --max-time 15 "${SITE_URL}/" 2>/dev/null || echo "99")
+          echo "Homepage response time: ${TIME}s"
+
+          # Warn if slow
+          if (( $(echo "$TIME > 3" | bc -l 2>/dev/null || echo 0) )); then
+            echo "::warning::Homepage response time is ${TIME}s (>3s threshold)"
+          fi
+
+      - name: Check SSL certificate
+        if: steps.health.outputs.status == 'healthy'
+        env:
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'https://dwellgauge.com' }}
+        run: |
+          # Extract domain from URL
+          DOMAIN=$(echo "$SITE_URL" | sed 's|https\?://||' | sed 's|/.*||')
+
+          # Check SSL expiry
+          EXPIRY=$(echo | openssl s_client -servername "$DOMAIN" -connect "${DOMAIN}:443" 2>/dev/null | openssl x509 -noout -enddate 2>/dev/null | cut -d= -f2)
+
+          if [[ -n "$EXPIRY" ]]; then
+            EXPIRY_EPOCH=$(date -d "$EXPIRY" +%s 2>/dev/null || date -j -f "%b %d %T %Y %Z" "$EXPIRY" +%s 2>/dev/null || echo 0)
+            NOW_EPOCH=$(date +%s)
+            DAYS_LEFT=$(( (EXPIRY_EPOCH - NOW_EPOCH) / 86400 ))
+
+            echo "SSL expires: $EXPIRY ($DAYS_LEFT days remaining)"
+
+            if [[ $DAYS_LEFT -lt 14 ]]; then
+              echo "::warning::SSL certificate expires in $DAYS_LEFT days — renew soon!"
+            fi
+          else
+            echo "::warning::Could not check SSL certificate"
+          fi
+
+      - name: Alert on failure
+        if: steps.health.outputs.status == 'unhealthy'
+        run: |
+          echo "::error::DwellGauge production is UNHEALTHY!"
+          echo "Health check returned: ${{ steps.health.outputs.status }}"
+          # Add notification here:
+          # curl -X POST "${{ secrets.SLACK_WEBHOOK }}" \
+          #   -H 'Content-Type: application/json' \
+          #   -d '{"text":"🚨 DwellGauge production is DOWN!"}'
