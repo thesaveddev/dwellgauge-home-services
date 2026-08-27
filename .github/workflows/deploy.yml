@@ -64,7 +64,7 @@ jobs:
       - name: Build
         run: NODE_ENV=production npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: https://dwellgauge.com
+          NEXT_PUBLIC_SITE_URL: http://${{ secrets.VPS_HOST }}:3000
 
   # ── Deploy to VPS ────────────────────────────────────────
   deploy:
@@ -74,7 +74,7 @@ jobs:
     if: always() && (needs.precheck.result == 'success' || inputs.skip_tests)
     environment:
       name: production
-      url: https://dwellgauge.com
+      url: http://${{ secrets.VPS_HOST }}:3000
     steps:
       - uses: actions/checkout@v4
 
@@ -110,12 +110,10 @@ jobs:
             npm ci --no-audit --no-fund
 
             echo "→ Running migrations..."
-            source .db-credentials 2>/dev/null || true
-            if [[ -n "${DATABASE_URL:-}" ]]; then
-              for migration in db/migrations/*.sql; do
-                [[ -f "$migration" ]] && psql "$DATABASE_URL" -f "$migration" 2>/dev/null || true
-              done
-            fi
+            DBURL="postgresql://dwellgauge:deploy2026secure@localhost:5432/dwellgauge"
+            for migration in db/migrations/*.sql; do
+              [[ -f "$migration" ]] && psql "$DBURL" -f "$migration" 2>/dev/null || true
+            done
 
             echo "→ Building production..."
             NODE_ENV=production npm run build
@@ -153,7 +151,7 @@ jobs:
 
       - name: Verify production health
         run: |
-          HEALTH=$(curl -sf https://dwellgauge.com/api/health 2>/dev/null || curl -sf http://${{ env.VPS_HOST }}:3000/api/health 2>/dev/null || echo '{"ok":false}')
+          HEALTH=$(curl -sf http://${{ env.VPS_HOST }}:3000/api/health 2>/dev/null || echo '{"ok":false}')
           echo "Health: $HEALTH"
           if echo "$HEALTH" | grep -q '"ok":true'; then
             echo "✅ Production verified"
@@ -165,7 +163,7 @@ jobs:
       - name: Verify key pages
         run: |
           for path in / /costs /licenses /about /robots.txt /sitemap.xml; do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://dwellgauge.com${path}" 2>/dev/null || curl -s -o /dev/null -w "%{http_code}" "http://${{ env.VPS_HOST }}:3000${path}" 2>/dev/null || echo "000")
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "http://${{ env.VPS_HOST }}:3000${path}" 2>/dev/null || echo "000")
             if [[ "$STATUS" == "200" ]]; then
               echo "✅ $path → $STATUS"
             else

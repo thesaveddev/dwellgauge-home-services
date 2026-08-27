@@ -14,7 +14,7 @@ jobs:
       - name: Check production health
         id: health
         env:
-          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'https://dwellgauge.com' }}
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'http://158.69.221.87:3000' }}
         run: |
           echo "Checking $SITE_URL ..."
 
@@ -32,7 +32,7 @@ jobs:
       - name: Check key pages
         if: steps.health.outputs.status == 'healthy'
         env:
-          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'https://dwellgauge.com' }}
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'http://158.69.221.87:3000' }}
         run: |
           FAILURES=0
           for path in / /costs /licenses /about /robots.txt /sitemap.xml; do
@@ -52,7 +52,7 @@ jobs:
       - name: Check page performance
         if: steps.health.outputs.status == 'healthy'
         env:
-          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'https://dwellgauge.com' }}
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'http://158.69.221.87:3000' }}
         run: |
           # Measure response time
           TIME=$(curl -sf -o /dev/null -w "%{time_total}" --max-time 15 "${SITE_URL}/" 2>/dev/null || echo "99")
@@ -66,7 +66,7 @@ jobs:
       - name: Check SSL certificate
         if: steps.health.outputs.status == 'healthy'
         env:
-          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'https://dwellgauge.com' }}
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL || 'http://158.69.221.87:3000' }}
         run: |
           # Extract domain from URL
           DOMAIN=$(echo "$SITE_URL" | sed 's|https\?://||' | sed 's|/.*||')
