@@ -11,10 +11,17 @@
   },
   "licensePrefixes": {
     "CAC": "hvac",
+    "CMC": "hvac",
     "CFC": "plumbing",
-    "EC": "electrical",
+    "CPC": "plumbing",
     "CCC": "roofing",
-    "CRC": "roofing"
+    "CRC": "roofing",
+    "CRS1": "roofing",
+    "CGC": "general-contractor",
+    "CBC": "general-contractor",
+    "CVC": "general-contractor",
+    "SCC": "swimming-pool",
+    "CUC": "utility"
   },
   "headerAliases": {
     "licenseNumber": ["license number", "license no", "lic number", "licensenumber", "license #", "license"],
