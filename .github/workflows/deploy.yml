@@ -3,7 +3,6 @@ name: Deploy to Production
 on:
   push:
     branches: [master, main]
-    # Only deploy when source code or config changes (not docs/markdown)
     paths:
       - "src/**"
       - "db/**"
@@ -14,6 +13,8 @@ on:
       - "package-lock.json"
       - "tsconfig.json"
       - "postcss.config.mjs"
+      - "Dockerfile"
+      - "docker-compose.yml"
 
   workflow_dispatch:
     inputs:
@@ -21,11 +22,6 @@ on:
         description: "Skip test suite (emergency deploy)"
         required: false
         default: false
-        type: boolean
-      run_migrations:
-        description: "Run database migrations before deploy"
-        required: false
-        default: true
         type: boolean
 
 concurrency:
@@ -61,12 +57,7 @@ jobs:
       - name: Tests
         run: npm test -- --run
 
-      - name: Build
-        run: NODE_ENV=production npm run build
-        env:
-          NEXT_PUBLIC_SITE_URL: http://${{ secrets.VPS_HOST }}:3000
-
-  # ── Deploy to VPS ────────────────────────────────────────
+  # ── Deploy to VPS via Docker ──────────────────────────────
   deploy:
     name: Deploy to VPS
     runs-on: ubuntu-latest
@@ -85,7 +76,7 @@ jobs:
       - name: Sync source code to VPS
         run: |
           rsync -avz --delete \
-            -e "ssh -i ~/.ssh/deploy_key" \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
             --exclude='node_modules' \
             --exclude='.next' \
             --exclude='.env' \
@@ -93,42 +84,42 @@ jobs:
             --exclude='.git' \
             --exclude='data files/' \
             --exclude='*.log' \
+            --exclude='.dockerignore' \
             ./ ${{ env.VPS_USER }}@${{ env.VPS_HOST }}:${{ env.APP_DIR }}/
 
-      - name: Deploy on VPS
-        env:
-          SSH_KEY: ~/.ssh/deploy_key
+      - name: Deploy with Docker Compose
         run: |
-          ssh -i $SSH_KEY ${{ env.VPS_USER }}@${{ env.VPS_HOST }} << 'DEPLOY_SCRIPT'
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no ${{ env.VPS_USER }}@${{ env.VPS_HOST }} << 'DEPLOY_SCRIPT'
             set -euo pipefail
             cd /var/www/dwellgauge
 
-            echo "→ Installing dependencies..."
-            npm ci --no-audit --no-fund
+            echo "=> Pulling latest code..."
+            git pull origin master 2>/dev/null || true
 
-            echo "→ Running migrations..."
-            DBURL="postgresql://dwellgauge:deploy2026secure@localhost:5432/dwellgauge"
-            for migration in db/migrations/*.sql; do
-              [[ -f "$migration" ]] && psql "$DBURL" -f "$migration" 2>/dev/null || true
+            echo "=> Building Docker images..."
+            docker compose build --no-cache
+
+            echo "=> Rolling restart..."
+            docker compose up -d --remove-orphans
+
+            echo "=> Waiting for healthy..."
+            for i in $(seq 1 20); do
+              if curl -sf http://localhost/api/health 2>/dev/null | grep -q '"ok":true'; then
+                echo "=> App is healthy"
+                break
+              fi
+              sleep 3
             done
 
-            echo "→ Building production..."
-            NODE_ENV=production npm run build
+            echo "=> Health check..."
+            HEALTH=$(curl -sf http://localhost/api/health 2>/dev/null || echo '{"ok":false}')
+            echo "$HEALTH"
 
-            echo "→ Restarting app..."
-            pm2 restart dwellgauge --update-env
-
-            echo "→ Waiting for app to start..."
-            sleep 5
-
-            echo "→ Health check..."
-            HEALTH=$(curl -s http://localhost:3000/api/health 2>/dev/null || echo '{"ok":false}')
             if echo "$HEALTH" | grep -q '"ok":true'; then
-              echo "✅ Deploy successful — app is healthy"
-              echo "$HEALTH"
+              echo "✅ Deploy successful"
             else
-              echo "⚠️  Health check failed, checking logs..."
-              pm2 logs dwellgauge --lines 20 --nostream
+              echo "⚠️  Checking logs..."
+              docker compose logs app --tail 20
               exit 1
             fi
           DEPLOY_SCRIPT
@@ -144,11 +135,11 @@ jobs:
     needs: [deploy]
     steps:
       - name: Wait for deployment to stabilize
-        run: sleep 15
+        run: sleep 20
 
       - name: Verify production health
         run: |
-          HEALTH=$(curl -sf http://${{ env.VPS_HOST }}:3000/api/health 2>/dev/null || echo '{"ok":false}')
+          HEALTH=$(curl -sf http://${{ env.VPS_HOST }}/api/health 2>/dev/null || echo '{"ok":false}')
           echo "Health: $HEALTH"
           if echo "$HEALTH" | grep -q '"ok":true'; then
             echo "✅ Production verified"
@@ -160,19 +151,10 @@ jobs:
       - name: Verify key pages
         run: |
           for path in / /costs /licenses /about /robots.txt /sitemap.xml; do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "http://${{ env.VPS_HOST }}:3000${path}" 2>/dev/null || echo "000")
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "http://${{ env.VPS_HOST }}${path}" 2>/dev/null || echo "000")
             if [[ "$STATUS" == "200" ]]; then
               echo "✅ $path → $STATUS"
             else
               echo "❌ $path → $STATUS"
             fi
           done
-
-      - name: Notify on failure
-        if: failure()
-        run: |
-          echo "::error::Production deployment verification failed! Check the VPS logs."
-          # Add Slack/Discord/email notification here when ready:
-          # curl -X POST "${{ secrets.SLACK_WEBHOOK }}" \
-          #   -H 'Content-Type: application/json' \
-          #   -d '{"text":"❌ DwellGauge deploy failed — check GitHub Actions"}'
