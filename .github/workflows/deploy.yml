@@ -72,9 +72,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: [precheck]
     if: always() && (needs.precheck.result == 'success' || inputs.skip_tests)
-    environment:
-      name: production
-      url: http://${{ secrets.VPS_HOST }}:3000
     steps:
       - uses: actions/checkout@v4
 
