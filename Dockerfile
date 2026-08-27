@@ -10,7 +10,10 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Generate next.js build manifest for runtime data fetching
+# Ensure public directory exists for build
+RUN mkdir -p /app/public
+
+# Build Next.js
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
 RUN npm run build
@@ -24,14 +27,14 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-# Install runtime-only deps (pg needs native bindings)
+# Install runtime deps (pg native bindings)
 RUN apt-get update -qq && apt-get install -y -qq --no-install-recommends \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy built app
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
+RUN mkdir -p /app/public
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/src ./src
