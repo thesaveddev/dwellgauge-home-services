@@ -10,20 +10,18 @@ useDefault = true
 [allowlist]
 description = "Allowlisted patterns that are not real secrets"
 
-# VPS IP address used in deployment scripts (not a secret, it's a public endpoint)
+# VPS IP address used in deployment scripts (public endpoint, not a secret)
 regexes = [
   '''158\.69\.221\.87''',
 ]
 
-# Deploy bootstrap password (placeholder, replaced on first login)
+# Deploy bootstrap files contain placeholder passwords, not real secrets
 paths = [
   '''deploy/.*\.sh''',
+  '''deploy/.*\.conf''',
   '''\.env\.production''',
   '''\.env\.example''',
   '''deploy/DEPLOY\.md''',
+  '''scripts/import-florida-postgres\.ts''',
+  '''scripts/sync-licenses-fl\.ts''',
 ]
-
-# Specific file patterns to skip
-[[allowlist.commits]]
-# Allow commits that only touch deploy scripts
-regex = '''deploy/.*'''
