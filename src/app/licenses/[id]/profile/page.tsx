@@ -16,6 +16,7 @@ import { dateStr } from "@/lib/format";
 import { getProfile, baseProfile, isFeatured } from "@/lib/profile-store";
 import { stateAuthorityUrl } from "@/lib/site";
 import { breadcrumbLd, pageMetadata, webPageLd } from "@/lib/seo";
+import BillingActions from "@/components/BillingActions";
 
 export const revalidate = 300;
 export const dynamicParams = true;
@@ -124,6 +125,7 @@ export default async function ContractorProfilePage({ params }: { params: Promis
                 : "Claim this listing to verify ownership, then add services, contact info, and review placement."}
             </p>
             <Link className="button full" href={claimHref}>{approved ? "Manage this profile" : approved === false && Boolean(stored) ? "Verify your claim" : "Claim this listing"} <ArrowRight size={16} aria-hidden /></Link>
+            <div style={{ marginTop: 18 }}><BillingActions priceId={process.env.NEXT_PUBLIC_STRIPE_FEATURED_PRICE_ID} licenseId={record.id} /></div>
             <p className="small muted" style={{ marginTop: 12 }}><WarningCircle size={14} style={{ verticalAlign: -2 }} aria-hidden /> Public-record fields remain under official control. Payment cannot change your license status.</p>
           </div>
         </div>

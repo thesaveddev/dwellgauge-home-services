@@ -21,7 +21,10 @@ function formData(values: Record<string, string | undefined>): string {
 
 export async function createCheckoutSession(input: { email: string; customerId?: string; priceId: string; successUrl: string; cancelUrl: string; metadata?: Record<string, string> }) {
   const params: Record<string, string | undefined> = { mode: "subscription", customer: input.customerId, customer_email: input.customerId ? undefined : input.email, "line_items[0][price]": input.priceId, "line_items[0][quantity]": "1", success_url: input.successUrl, cancel_url: input.cancelUrl, "subscription_data[metadata][email]": input.email };
-  for (const [key, value] of Object.entries(input.metadata || {})) params[`metadata[${key}]`] = value;
+  for (const [key, value] of Object.entries(input.metadata || {})) {
+    params[`metadata[${key}]`] = value;
+    params[`subscription_data[metadata][${key}]`] = value;
+  }
   return stripeRequest("/checkout/sessions", { method: "POST", body: formData(params) });
 }
 

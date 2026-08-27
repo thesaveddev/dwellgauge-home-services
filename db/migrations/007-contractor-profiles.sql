@@ -22,6 +22,7 @@ create table if not exists contractor_profiles (
   about text,
   verified boolean not null default false,
   featured boolean not null default false,
+  billing_customer_id text,
   revised_by text,
   revised_at timestamptz not null default now(),
   created_at timestamptz not null default now()
@@ -35,6 +36,10 @@ create index if not exists contractor_profiles_verified_idx
 
 create index if not exists contractor_profiles_featured_idx
   on contractor_profiles (featured) where featured = true;
+
+create index if not exists contractor_profiles_billing_customer_idx
+  on contractor_profiles (billing_customer_id)
+  where billing_customer_id is not null;
 
 -- Changes to marketing fields are administrative events worth an audit trail.
 create or replace function contractor_profiles_touch() returns trigger as $$

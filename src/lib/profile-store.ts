@@ -12,6 +12,7 @@
 import type { Pool } from "pg";
 import type { LicenseRecord } from "./datasets";
 import { hasDatabase, createPool } from "./db";
+import { getActiveSubscription } from "./billing-store";
 
 export interface ContractorProfile {
   licenseId: string;
@@ -26,6 +27,7 @@ export interface ContractorProfile {
   about: string | null;
   verified: boolean;
   featured: boolean;
+  billingCustomerId: string | null;
 }
 
 let pool: Pool | null = null;
@@ -53,6 +55,7 @@ export function baseProfile(record: LicenseRecord): ContractorProfile {
     about: null,
     verified: false,
     featured: false,
+    billingCustomerId: null,
   };
 }
 
@@ -69,6 +72,7 @@ interface ProfileRow {
   about: string | null;
   verified: boolean;
   featured: boolean;
+  billing_customer_id: string | null;
 }
 
 function mapRow(row: ProfileRow): ContractorProfile {
@@ -85,6 +89,7 @@ function mapRow(row: ProfileRow): ContractorProfile {
     about: row.about,
     verified: Boolean(row.verified),
     featured: Boolean(row.featured),
+    billingCustomerId: row.billing_customer_id ?? null,
   };
 }
 
@@ -110,13 +115,18 @@ export async function getProfile(record: LicenseRecord): Promise<ContractorProfi
   try {
     const { rows } = await db.query<ProfileRow>(
       `select license_id, status, tagline, website, email, phone,
-              service_areas, services_offered, hours, about, verified, featured
+              service_areas, services_offered, hours, about, verified, featured,
+              billing_customer_id
          from contractor_profiles
         where license_id = $1
         limit 1`,
       [record.id],
     );
     const value = rows.length ? mapRow(rows[0]) : null;
+    if (value?.billingCustomerId) {
+      const subscription = await getActiveSubscription(value.billingCustomerId);
+      value.featured = Boolean(subscription);
+    }
     profileCache.set(record.id, { at: Date.now(), value });
     return value;
   } catch (error) {
