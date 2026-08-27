@@ -27,5 +27,5 @@
     "city": ["city", "mail city", "business city", "city, state, zip"]
   },
   "activeStatusValues": ["active", "current", "clear", "licensed"],
-  "maxRecords": 50000
+  "maxRecords": 300000
 }
