@@ -10,12 +10,12 @@ function assert(name: string, quality: ReturnType<typeof validateEstimates>) { c
 async function main() {
   // Wage ratios and permit observations are optional for pilot — warn but don't fail
   const wages = await readJson("wage-ratios.json") as { ratios?: unknown } | null;
-  if (!wages?.ratios || (typeof wages.ratios === 'object' && Object.keys(wages.ratios).length === 0)) {
+  if (!wages?.ratios || (typeof wages.ratios === 'object' && Object.keys(wages.ratios as Record<string, unknown>).length === 0)) {
     console.log("Wage ratios: SKIP (not populated yet)");
   } else {
     assert("Wage ratios", validateWageRatios(wages.ratios));
   }
-  const permits = await readJson("permit-observations.json") as { observations?: unknown } | null;
+  const permits = await readJson("permit-observations.json") as { observations?: unknown[] } | null;
   const permitList = permits?.observations ?? [];
   if (!permitList.length) {
     console.log("Permit observations: SKIP (not populated yet)");
