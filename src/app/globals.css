@@ -302,6 +302,10 @@ h3 { font-size: 1.25rem; }
 .profile-head h1 { margin: 14px 0 8px; }
 .profile-head p { max-width: 640px; color: var(--muted); font-size: 1rem; }
 .profile-head .pill { margin-right: 8px; }
+.profile-facts { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 18px; color: var(--muted); font-size: 0.82rem; }
+.profile-facts span { padding-right: 16px; border-right: 1px solid var(--line); }
+.profile-facts span:last-child { border-right: 0; }
+.profile-facts strong { color: var(--ink); font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; margin-right: 5px; }
 .profile-head-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 11px; flex: 0 0 auto; }
 .profile-main h2 { margin: 0; font-size: 1.05rem; }
 .profile-section-title { display: flex; align-items: center; gap: 9px; margin-bottom: 8px; }
@@ -317,6 +321,7 @@ h3 { font-size: 1.25rem; }
 @media (max-width: 800px) {
   .profile-head { display: block; }
   .profile-head-actions { margin-top: 18px; }
+  .profile-facts span { border-right: 0; padding-right: 0; }
 }
 
 .error-page { min-height: 55vh; display: grid; place-items: center; text-align: center; }

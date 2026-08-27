@@ -52,6 +52,11 @@ export default async function ContractorProfilePage({ params }: { params: Promis
             {profile.verified && <span className="pill">License verified</span>}
             <h1>{record.businessName}</h1>
             <p>{approved && profile.tagline ? profile.tagline : `${record.classification ?? record.trade} contractor serving ${record.city ?? record.stateCode}`}</p>
+            <div className="profile-facts" aria-label="Contractor summary">
+              <span><strong>License status</strong> {record.status}</span>
+              <span><strong>Trade</strong> {record.classification ?? record.trade}</span>
+              <span><strong>City</strong> {record.city ?? "Not reported"}</span>
+            </div>
           </div>
           <div className="profile-head-actions">
             <a className="button secondary" href={authority} target="_blank" rel="noreferrer">Open official source</a>
@@ -125,6 +130,7 @@ export default async function ContractorProfilePage({ params }: { params: Promis
                 : "Claim this listing to verify ownership, then add services, contact info, and review placement."}
             </p>
             <Link className="button full" href={claimHref}>{approved ? "Manage this profile" : approved === false && Boolean(stored) ? "Verify your claim" : "Claim this listing"} <ArrowRight size={16} aria-hidden /></Link>
+            <p className="small muted">Claiming lets you request corrections and add approved business details. It does not change the state record.</p>
             <div style={{ marginTop: 18 }}><BillingActions priceId={process.env.NEXT_PUBLIC_STRIPE_FEATURED_PRICE_ID} licenseId={record.id} /></div>
             <p className="small muted" style={{ marginTop: 12 }}><WarningCircle size={14} style={{ verticalAlign: -2 }} aria-hidden /> Public-record fields remain under official control. Payment cannot change your license status.</p>
           </div>
