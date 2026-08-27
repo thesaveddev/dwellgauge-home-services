@@ -1,0 +1,33 @@
+name: Data freshness alert
+on:
+  schedule:
+    - cron: "23 8 * * *"
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check production freshness
+        id: freshness
+        env:
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL }}
+          MONITOR_TOKEN: ${{ secrets.FRESHNESS_MONITOR_TOKEN }}
+        run: |
+          set -o pipefail
+          curl --fail-with-body --silent --show-error --max-time 30 \
+            -H "Authorization: Bearer ${MONITOR_TOKEN}" \
+            "${SITE_URL}/api/health/freshness" | tee freshness.json
+      - name: Notify on failure
+        if: ${{ failure() }}
+        env:
+          ALERT_WEBHOOK_URL: ${{ secrets.DATA_ALERT_WEBHOOK_URL }}
+          SITE_URL: ${{ secrets.PRODUCTION_SITE_URL }}
+        run: |
+          if [ -n "${ALERT_WEBHOOK_URL}" ]; then
+            curl --fail --silent --show-error --max-time 15 -X POST \
+              -H 'Content-Type: application/json' \
+              -d "{\"text\":\"DwellGauge data freshness check failed for ${SITE_URL}\"}" \
+              "${ALERT_WEBHOOK_URL}"
+          else
+            echo "DATA_ALERT_WEBHOOK_URL is not configured; workflow failure is the alert."
+          fi

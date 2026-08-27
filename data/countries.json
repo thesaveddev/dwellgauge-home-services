@@ -1,0 +1,8 @@
+{
+  "countries": [
+    { "code": "us", "name": "United States", "locale": "en-US", "currency": "USD", "priceDisplay": "excl", "status": "live", "default": true },
+    { "code": "ca", "name": "Canada", "locale": "en-CA", "currency": "CAD", "priceDisplay": "excl", "status": "planned" },
+    { "code": "uk", "name": "United Kingdom", "locale": "en-GB", "currency": "GBP", "vatRate": 0.2, "priceDisplay": "incl", "status": "planned" },
+    { "code": "de", "name": "Deutschland", "locale": "de-DE", "currency": "EUR", "vatRate": 0.19, "priceDisplay": "incl", "status": "planned" }
+  ]
+}

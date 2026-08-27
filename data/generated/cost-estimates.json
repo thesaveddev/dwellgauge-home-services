@@ -1,0 +1,3802 @@
+[
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "new-york-ny",
+    "low": 9650,
+    "median": 11750,
+    "high": 15050,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5130
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5280
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 570
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 350
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.08,
+      "ageComplexity": 0.08,
+      "climate": 0.04,
+      "permitFee": 350
+    },
+    "computedAt": "2026-08-26T20:34:58.348Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "los-angeles-ca",
+    "low": 9200,
+    "median": 11200,
+    "high": 14350,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4910
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5140
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 550
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 300
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.06,
+      "ageComplexity": 0.06,
+      "climate": 0.02,
+      "permitFee": 300
+    },
+    "computedAt": "2026-08-26T20:34:58.348Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "chicago-il",
+    "low": 9400,
+    "median": 11450,
+    "high": 14650,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5040
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5490
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 560
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 250
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.06,
+      "climate": 0.07,
+      "permitFee": 250
+    },
+    "computedAt": "2026-08-26T20:34:58.348Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "houston-tx",
+    "low": 9000,
+    "median": 11000,
+    "high": 14100,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4870
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5580
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 540
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 180
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0.09,
+      "permitFee": 180
+    },
+    "computedAt": "2026-08-26T20:34:58.348Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "phoenix-az",
+    "low": 9150,
+    "median": 11150,
+    "high": 14250,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4930
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5590
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 550
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 190
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.02,
+      "climate": 0.11,
+      "permitFee": 190
+    },
+    "computedAt": "2026-08-26T20:34:58.348Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "philadelphia-pa",
+    "low": 9250,
+    "median": 11250,
+    "high": 14400,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4960
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5460
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 550
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 220
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.01,
+      "ageComplexity": 0.07,
+      "climate": 0.05,
+      "permitFee": 220
+    },
+    "computedAt": "2026-08-26T20:34:58.348Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "san-antonio-tx",
+    "low": 8750,
+    "median": 10650,
+    "high": 13650,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4730
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5530
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 530
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 150
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0.08,
+      "permitFee": 150
+    },
+    "computedAt": "2026-08-26T20:34:58.348Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "dallas-tx",
+    "low": 8900,
+    "median": 10850,
+    "high": 13900,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4810
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5560
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 530
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 170
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0.08,
+      "permitFee": 170
+    },
+    "computedAt": "2026-08-26T20:34:58.348Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "austin-tx",
+    "low": 9000,
+    "median": 10950,
+    "high": 14000,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4840
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5430
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 540
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 200
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.99,
+      "ageComplexity": 0.02,
+      "climate": 0.08,
+      "permitFee": 200
+    },
+    "computedAt": "2026-08-26T20:34:58.348Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "jacksonville-fl",
+    "low": 8950,
+    "median": 10900,
+    "high": 13950,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4830
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5590
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 540
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 160
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.02,
+      "climate": 0.1,
+      "permitFee": 160
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "miami-fl",
+    "low": 9650,
+    "median": 11750,
+    "high": 15050,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5190
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5600
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 580
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 210
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.03,
+      "ageComplexity": 0.04,
+      "climate": 0.12,
+      "permitFee": 210
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "atlanta-ga",
+    "low": 8750,
+    "median": 10650,
+    "high": 13650,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4720
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5460
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 520
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 160
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0.06,
+      "permitFee": 160
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "boston-ma",
+    "low": 9650,
+    "median": 11750,
+    "high": 15050,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5160
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5460
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 570
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 280
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.05,
+      "ageComplexity": 0.07,
+      "climate": 0.07,
+      "permitFee": 280
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "seattle-wa",
+    "low": 9000,
+    "median": 10950,
+    "high": 14000,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4810
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5140
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 530
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 260
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.04,
+      "ageComplexity": 0.04,
+      "climate": 0.03,
+      "permitFee": 260
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "denver-co",
+    "low": 9000,
+    "median": 11000,
+    "high": 14100,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4860
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5400
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 540
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 200
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1,
+      "ageComplexity": 0.04,
+      "climate": 0.06,
+      "permitFee": 200
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "las-vegas-nv",
+    "low": 9150,
+    "median": 11150,
+    "high": 14250,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4940
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5600
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 550
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 170
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.01,
+      "climate": 0.12,
+      "permitFee": 170
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "portland-or",
+    "low": 8850,
+    "median": 10800,
+    "high": 13800,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4760
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5180
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 530
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 230
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.05,
+      "climate": 0.02,
+      "permitFee": 230
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "charlotte-nc",
+    "low": 8500,
+    "median": 10350,
+    "high": 13250,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4590
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5370
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 510
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 150
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0.05,
+      "permitFee": 150
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "nashville-tn",
+    "low": 8600,
+    "median": 10500,
+    "high": 13450,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4650
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5330
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 520
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 160
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0.04,
+      "permitFee": 160
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "hvac-replacement",
+    "metroSlug": "tampa-fl",
+    "low": 9100,
+    "median": 11100,
+    "high": 14200,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4920
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5630
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 550
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 170
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0.1,
+      "permitFee": 170
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "new-york-ny",
+    "low": 12650,
+    "median": 15450,
+    "high": 19800,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 8270
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5290
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 1050
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 420
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.08,
+      "ageComplexity": 0.08,
+      "climate": 0,
+      "permitFee": 420
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "los-angeles-ca",
+    "low": 12300,
+    "median": 15000,
+    "high": 19200,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 8040
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5240
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 1020
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 380
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.06,
+      "ageComplexity": 0.06,
+      "climate": 0,
+      "permitFee": 380
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "chicago-il",
+    "low": 12050,
+    "median": 14700,
+    "high": 18800,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7920
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5360
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 1010
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 300
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.06,
+      "climate": 0,
+      "permitFee": 300
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "houston-tx",
+    "low": 11450,
+    "median": 13950,
+    "high": 17850,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7560
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5390
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 960
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 200
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 200
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "phoenix-az",
+    "low": 11400,
+    "median": 13900,
+    "high": 17800,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7530
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5310
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 960
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 210
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 210
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "philadelphia-pa",
+    "low": 12100,
+    "median": 14750,
+    "high": 18900,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7970
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5450
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 1010
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 260
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.01,
+      "ageComplexity": 0.07,
+      "climate": 0,
+      "permitFee": 260
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "san-antonio-tx",
+    "low": 11250,
+    "median": 13700,
+    "high": 17550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7440
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5410
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 950
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 180
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 180
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "dallas-tx",
+    "low": 11400,
+    "median": 13900,
+    "high": 17800,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7540
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5420
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 960
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 200
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 200
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "austin-tx",
+    "low": 11450,
+    "median": 13950,
+    "high": 17850,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7550
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5270
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 960
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 220
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.99,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 220
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "jacksonville-fl",
+    "low": 11300,
+    "median": 13800,
+    "high": 17650,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7460
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5370
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 950
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 240
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 240
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "miami-fl",
+    "low": 11900,
+    "median": 14500,
+    "high": 18550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7800
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5230
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 990
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 320
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.03,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 320
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "atlanta-ga",
+    "low": 11400,
+    "median": 13900,
+    "high": 17800,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7540
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5430
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 960
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 190
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 190
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "boston-ma",
+    "low": 12300,
+    "median": 15000,
+    "high": 19200,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 8090
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5320
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 1030
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 300
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.05,
+      "ageComplexity": 0.07,
+      "climate": 0,
+      "permitFee": 300
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "seattle-wa",
+    "low": 11950,
+    "median": 14550,
+    "high": 18600,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7850
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5210
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 1000
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 280
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.04,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 280
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "denver-co",
+    "low": 11700,
+    "median": 14250,
+    "high": 18250,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7720
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5330
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 980
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 220
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 220
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "las-vegas-nv",
+    "low": 11250,
+    "median": 13700,
+    "high": 17550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7430
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5240
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 950
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 190
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.01,
+      "climate": 0,
+      "permitFee": 190
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "portland-or",
+    "low": 11950,
+    "median": 14550,
+    "high": 18600,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7870
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5330
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 1000
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 250
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.05,
+      "climate": 0,
+      "permitFee": 250
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "charlotte-nc",
+    "low": 11250,
+    "median": 13700,
+    "high": 17550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7440
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5410
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 950
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 180
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 180
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "nashville-tn",
+    "low": 11450,
+    "median": 13950,
+    "high": 17850,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7570
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5390
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 960
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 190
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 190
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "roof-replacement",
+    "metroSlug": "tampa-fl",
+    "low": 11500,
+    "median": 14000,
+    "high": 17900,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 7570
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 5390
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 960
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 230
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 230
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "new-york-ny",
+    "low": 7700,
+    "median": 9400,
+    "high": 12050,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5460
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2780
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 640
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 300
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.08,
+      "ageComplexity": 0.08,
+      "climate": 0,
+      "permitFee": 300
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "los-angeles-ca",
+    "low": 7450,
+    "median": 9100,
+    "high": 11650,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5300
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2750
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 620
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 260
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.06,
+      "ageComplexity": 0.06,
+      "climate": 0,
+      "permitFee": 260
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "chicago-il",
+    "low": 7350,
+    "median": 8950,
+    "high": 11450,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5240
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2820
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 610
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 220
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.06,
+      "climate": 0,
+      "permitFee": 220
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "houston-tx",
+    "low": 6950,
+    "median": 8500,
+    "high": 10900,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5000
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2840
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 580
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 160
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 160
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "phoenix-az",
+    "low": 6950,
+    "median": 8450,
+    "high": 10800,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4980
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2790
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 580
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 150
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 150
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "philadelphia-pa",
+    "low": 7400,
+    "median": 9000,
+    "high": 11500,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5280
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2880
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 620
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 200
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.01,
+      "ageComplexity": 0.07,
+      "climate": 0,
+      "permitFee": 200
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "san-antonio-tx",
+    "low": 6850,
+    "median": 8350,
+    "high": 10700,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4930
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2850
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 570
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 140
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 140
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "dallas-tx",
+    "low": 6950,
+    "median": 8500,
+    "high": 10900,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5010
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2870
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 580
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 150
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 150
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "austin-tx",
+    "low": 6950,
+    "median": 8500,
+    "high": 10900,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5000
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2780
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 580
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 170
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.99,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 170
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "jacksonville-fl",
+    "low": 6900,
+    "median": 8400,
+    "high": 10750,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4960
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2840
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 580
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 140
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 140
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "miami-fl",
+    "low": 7200,
+    "median": 8800,
+    "high": 11250,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5170
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2760
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 600
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 180
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.03,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 180
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "atlanta-ga",
+    "low": 6950,
+    "median": 8450,
+    "high": 10800,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4990
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2860
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 580
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 140
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 140
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "boston-ma",
+    "low": 7500,
+    "median": 9150,
+    "high": 11700,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5350
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2800
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 620
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 240
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.05,
+      "ageComplexity": 0.07,
+      "climate": 0,
+      "permitFee": 240
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "seattle-wa",
+    "low": 7250,
+    "median": 8850,
+    "high": 11350,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5180
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2740
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 600
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 220
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.04,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 220
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "denver-co",
+    "low": 7150,
+    "median": 8700,
+    "high": 11150,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5120
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2810
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 600
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 170
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 170
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "las-vegas-nv",
+    "low": 6850,
+    "median": 8350,
+    "high": 10700,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4930
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2760
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 570
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 140
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.01,
+      "climate": 0,
+      "permitFee": 140
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "portland-or",
+    "low": 7250,
+    "median": 8850,
+    "high": 11350,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5200
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2800
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 610
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 190
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.05,
+      "climate": 0,
+      "permitFee": 190
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "charlotte-nc",
+    "low": 6850,
+    "median": 8350,
+    "high": 10700,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4930
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2860
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 580
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 130
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 130
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "nashville-tn",
+    "low": 6950,
+    "median": 8500,
+    "high": 10900,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5020
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2840
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 590
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 140
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 140
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "whole-home-repipe",
+    "metroSlug": "tampa-fl",
+    "low": 6950,
+    "median": 8500,
+    "high": 10900,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 5010
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 2840
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 580
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 150
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 150
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "new-york-ny",
+    "low": 3450,
+    "median": 4200,
+    "high": 5400,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1910
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1490
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 310
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 380
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.08,
+      "ageComplexity": 0.08,
+      "climate": 0,
+      "permitFee": 380
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "los-angeles-ca",
+    "low": 3300,
+    "median": 4050,
+    "high": 5200,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1860
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1470
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 300
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 340
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.06,
+      "ageComplexity": 0.06,
+      "climate": 0,
+      "permitFee": 340
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "chicago-il",
+    "low": 3200,
+    "median": 3900,
+    "high": 5000,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1810
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1490
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 290
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 280
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.06,
+      "climate": 0,
+      "permitFee": 280
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "houston-tx",
+    "low": 3000,
+    "median": 3650,
+    "high": 4650,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1740
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1510
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 280
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 170
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 170
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "phoenix-az",
+    "low": 2950,
+    "median": 3600,
+    "high": 4600,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1720
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1470
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 280
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 160
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 160
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "philadelphia-pa",
+    "low": 3200,
+    "median": 3900,
+    "high": 5000,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1840
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1530
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 290
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 230
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.01,
+      "ageComplexity": 0.07,
+      "climate": 0,
+      "permitFee": 230
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "san-antonio-tx",
+    "low": 2900,
+    "median": 3550,
+    "high": 4550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1700
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1500
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 270
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 150
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 150
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "dallas-tx",
+    "low": 2950,
+    "median": 3600,
+    "high": 4600,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1720
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1500
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 270
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 165
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 165
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "austin-tx",
+    "low": 3000,
+    "median": 3650,
+    "high": 4650,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1730
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1470
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 280
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 185
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.99,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 185
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "jacksonville-fl",
+    "low": 2900,
+    "median": 3550,
+    "high": 4550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1700
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1490
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 270
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 155
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 155
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "miami-fl",
+    "low": 3100,
+    "median": 3800,
+    "high": 4850,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1800
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1470
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 290
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 200
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.03,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 200
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "atlanta-ga",
+    "low": 2950,
+    "median": 3600,
+    "high": 4600,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1730
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1510
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 280
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 150
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 150
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "boston-ma",
+    "low": 3250,
+    "median": 3950,
+    "high": 5050,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1850
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1480
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 300
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 260
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.05,
+      "ageComplexity": 0.07,
+      "climate": 0,
+      "permitFee": 260
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "seattle-wa",
+    "low": 3150,
+    "median": 3850,
+    "high": 4950,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1800
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1450
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 290
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 250
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.04,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 250
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "denver-co",
+    "low": 3100,
+    "median": 3750,
+    "high": 4800,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1780
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1500
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 280
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 190
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 190
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "las-vegas-nv",
+    "low": 2900,
+    "median": 3550,
+    "high": 4550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1700
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1450
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 270
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 160
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.01,
+      "climate": 0,
+      "permitFee": 160
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "portland-or",
+    "low": 3100,
+    "median": 3800,
+    "high": 4850,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1800
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1480
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 290
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 210
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.05,
+      "climate": 0,
+      "permitFee": 210
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "charlotte-nc",
+    "low": 2900,
+    "median": 3550,
+    "high": 4550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1700
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1510
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 270
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 145
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 145
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "nashville-tn",
+    "low": 2950,
+    "median": 3600,
+    "high": 4600,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1730
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1490
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 280
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 150
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 150
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "electrical-panel-upgrade",
+    "metroSlug": "tampa-fl",
+    "low": 2950,
+    "median": 3600,
+    "high": 4600,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 1720
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1490
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 280
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 160
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 160
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "new-york-ny",
+    "low": 5050,
+    "median": 6150,
+    "high": 7850,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4310
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1370
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 370
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.08,
+      "ageComplexity": 0.08,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "los-angeles-ca",
+    "low": 4900,
+    "median": 6000,
+    "high": 7700,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4200
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1360
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 360
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.06,
+      "ageComplexity": 0.06,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.349Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "chicago-il",
+    "low": 4900,
+    "median": 5950,
+    "high": 7600,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4170
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1400
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 360
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.06,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "houston-tx",
+    "low": 4700,
+    "median": 5750,
+    "high": 7350,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4020
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1420
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 350
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "phoenix-az",
+    "low": 4650,
+    "median": 5700,
+    "high": 7300,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 3990
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1400
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 340
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "philadelphia-pa",
+    "low": 4900,
+    "median": 6000,
+    "high": 7700,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4200
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1430
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 360
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.01,
+      "ageComplexity": 0.07,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "san-antonio-tx",
+    "low": 4650,
+    "median": 5650,
+    "high": 7250,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 3950
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1430
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 340
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "dallas-tx",
+    "low": 4650,
+    "median": 5700,
+    "high": 7300,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 3990
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1430
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 340
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "austin-tx",
+    "low": 4650,
+    "median": 5700,
+    "high": 7300,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 3990
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1380
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 340
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.99,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "jacksonville-fl",
+    "low": 4650,
+    "median": 5650,
+    "high": 7250,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 3950
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1410
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 340
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "miami-fl",
+    "low": 4800,
+    "median": 5850,
+    "high": 7500,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4090
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1360
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 350
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.03,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "atlanta-ga",
+    "low": 4650,
+    "median": 5700,
+    "high": 7300,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 3990
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1430
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 340
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.96,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "boston-ma",
+    "low": 4950,
+    "median": 6050,
+    "high": 7750,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4240
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1380
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 360
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.05,
+      "ageComplexity": 0.07,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "seattle-wa",
+    "low": 4850,
+    "median": 5900,
+    "high": 7550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4130
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1360
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 350
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.04,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "denver-co",
+    "low": 4750,
+    "median": 5800,
+    "high": 7400,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4060
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1390
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 350
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1,
+      "ageComplexity": 0.04,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "las-vegas-nv",
+    "low": 4650,
+    "median": 5650,
+    "high": 7250,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 3950
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1380
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 340
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.98,
+      "ageComplexity": 0.01,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "portland-or",
+    "low": 4850,
+    "median": 5900,
+    "high": 7550,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4130
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1390
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 350
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 1.02,
+      "ageComplexity": 0.05,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "charlotte-nc",
+    "low": 4650,
+    "median": 5650,
+    "high": 7250,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 3950
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1430
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 340
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.95,
+      "ageComplexity": 0.02,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "nashville-tn",
+    "low": 4700,
+    "median": 5750,
+    "high": 7350,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4020
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1420
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 350
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  },
+  {
+    "serviceSlug": "interior-painting",
+    "metroSlug": "tampa-fl",
+    "low": 4700,
+    "median": 5750,
+    "high": 7350,
+    "components": [
+      {
+        "label": "Labor",
+        "amount": 4020
+      },
+      {
+        "label": "Materials & equipment",
+        "amount": 1420
+      },
+      {
+        "label": "Overhead & disposal",
+        "amount": 350
+      },
+      {
+        "label": "Permits & inspection",
+        "amount": 0
+      }
+    ],
+    "adjustments": {
+      "wageRatio": 1,
+      "materialsFactor": 0.97,
+      "ageComplexity": 0.03,
+      "climate": 0,
+      "permitFee": 0
+    },
+    "computedAt": "2026-08-26T20:34:58.350Z",
+    "inputsUsed": {
+      "wageRatio": 1,
+      "permitActualAvg": null,
+      "permitSamples": 0
+    }
+  }
+]

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DwellGauge vs. Lead-Gen Marketplaces — Contractor Brief</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm 14mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #17221f;
+    background: #fff;
+    font-size: 10.5px;
+    line-height: 1.55;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Header ─────────────────────────────────────── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    border-bottom: 3px solid #c84d3b;
+  }
+  .brand { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; color: #17221f; }
+  .brand span { color: #c84d3b; }
+  .tagline {
+    color: #5f6e68;
+    font-family: "SF Mono", "Consolas", "Liberation Mono", monospace;
+    font-size: 8px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  /* ── Headline ───────────────────────────────────── */
+  .headline {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+    max-width: 520px;
+    margin-bottom: 6px;
+  }
+  .sub {
+    color: #5f6e68;
+    font-size: 10px;
+    max-width: 480px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  /* ── Comparison Table ───────────────────────────── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5px;
+    margin-bottom: 16px;
+  }
+  thead th {
+    background: #e5ebe7;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 8px 9px;
+    text-align: left;
+    border-bottom: 2px solid #17221f;
+    white-space: nowrap;
+  }
+  thead th:last-child {
+    background: #c84d3b;
+    color: #fff;
+    border-bottom-color: #963226;
+  }
+  tbody td {
+    padding: 7px 9px;
+    border-bottom: 1px solid #ccd6d0;
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: 2px solid #17221f; }
+  tbody td:first-child {
+    font-weight: 700;
+    font-size: 8.5px;
+    color: #5f6e68;
+    white-space: nowrap;
+  }
+  tbody td:last-child {
+    background: #fdf3f1;
+    font-weight: 700;
+    color: #17221f;
+  }
+
+  /* ── Math strip ─────────────────────────────────── */
+  .math {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border: 1px solid #ccd6d0;
+    border-top: 3px solid #c84d3b;
+    margin-bottom: 14px;
+  }
+  .math-cell {
+    padding: 12px 14px;
+    border-right: 1px solid #ccd6d0;
+  }
+  .math-cell:last-child { border-right: 0; }
+  .math-cell strong {
+    display: block;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #5f6e68;
+    margin-bottom: 3px;
+  }
+  .math-cell .num {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+  .math-cell .num.accent { color: #c84d3b; }
+  .math-cell .note {
+    color: #5f6e68;
+    font-size: 8.5px;
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+
+  /* ── Two-column sections ────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  /* ── Benefits ───────────────────────────────────── */
+  .benefits {
+    border: 1px solid #ccd6d0;
+    padding: 12px 14px;
+  }
+  .benefits h3 {
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    color: #c84d3b;
+  }
+  .benefits ol {
+    padding-left: 16px;
+    list-style: decimal;
+  }
+  .benefits li {
+    margin-bottom: 5px;
+    font-size: 9.5px;
+    line-height: 1.4;
+  }
+  .benefits li strong { font-weight: 700; }
+
+  /* ── Objections ─────────────────────────────────── */
+  .objections {
+    border: 1px solid #ccd6d0;
+    padding: 12px 14px;
+  }
+  .objections h3 {
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    color: #c84d3b;
+  }
+  .obj-row {
+    margin-bottom: 10px;
+  }
+  .obj-row:last-child { margin-bottom: 0; }
+  .obj-q {
+    font-weight: 700;
+    font-size: 9px;
+    color: #5f6e68;
+    margin-bottom: 2px;
+  }
+  .obj-a {
+    font-size: 9.5px;
+    line-height: 1.4;
+  }
+
+  /* ── Callout ────────────────────────────────────── */
+  .callout {
+    background: #f5f8f6;
+    border-left: 3px solid #c84d3b;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    font-size: 9.5px;
+    line-height: 1.45;
+    color: #17221f;
+  }
+  .callout strong { font-weight: 700; }
+
+  /* ── Footer ─────────────────────────────────────── */
+  .footer {
+    border-top: 1px solid #ccd6d0;
+    padding-top: 10px;
+    font-size: 7.5px;
+    color: #5f6e68;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: start;
+  }
+  .footer a { color: #c84d3b; text-decoration: none; }
+
+  /* ── Print overrides ────────────────────────────── */
+  @media print {
+    body { background: #fff; }
+    .header { page-break-after: avoid; }
+    .math, .two-col, .callout, .footer { page-break-inside: avoid; }
+    thead { display: table-header-group; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ───────────────────────────────────────── -->
+<div class="header">
+  <div class="brand">Dwell<span>Gauge</span></div>
+  <div class="tagline">Verified contractor data &middot; Real project costs<br>Contractor lead-market comparison &middot; Confidential</div>
+</div>
+
+<!-- ── HEADLINE ─────────────────────────────────────── -->
+<div class="headline">Stop paying per lead.<br>Start paying for placement.</div>
+<p class="sub">Lead-gen marketplaces sell shared, unvetted leads at $15–150 each. DwellGauge routes qualified quote requests exclusively to you for a flat monthly fee.</p>
+
+<!-- ── COMPARISON TABLE ─────────────────────────────── -->
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Angi / HomeAdvisor</th>
+      <th>Thumbtack</th>
+      <th>Fixr</th>
+      <th>BuildZoom</th>
+      <th>DwellGauge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>How you pay</td>
+      <td>Per lead + $288–300/yr membership</td>
+      <td>Per lead (some subscription tiers)</td>
+      <td>Per lead ($50–150)</td>
+      <td>Per lead / high-touch</td>
+      <td>Flat $99/mo</td>
+    </tr>
+    <tr>
+      <td>Typical cost per lead</td>
+      <td>$15–85</td>
+      <td>$10–50</td>
+      <td>$50–150</td>
+      <td>Varies, expensive</td>
+      <td>No per-lead cost</td>
+    </tr>
+    <tr>
+      <td>Leads shared with competitors?</td>
+      <td>Yes — sold 3–4 ways</td>
+      <td>Sometimes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No — exclusive to you</td>
+    </tr>
+    <tr>
+      <td>Are leads vetted?</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Partial</td>
+      <td>Yes — human-reviewed</td>
+    </tr>
+    <tr>
+      <td>Cost predictability</td>
+      <td>None — bill scales with volume</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Flat, cancel anytime</td>
+    </tr>
+    <tr>
+      <td>Your profile lives on</td>
+      <td>Their platform</td>
+      <td>Their platform</td>
+      <td>Their platform</td>
+      <td>Their platform</td>
+      <td>A URL you control</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ── THE MATH ─────────────────────────────────────── -->
+<div class="math">
+  <div class="math-cell">
+    <strong>Avg. marketplace lead</strong>
+    <div class="num">~$90</div>
+    <div class="note">Across Angi, Thumbtack, and Fixr — shared, unvetted, no guarantee of a real request.</div>
+  </div>
+  <div class="math-cell">
+    <strong>Two leads/month</strong>
+    <div class="num">~$180</div>
+    <div class="note">And 3–4 other contractors were also sold that same "lead."</div>
+  </div>
+  <div class="math-cell">
+    <strong>DwellGauge featured</strong>
+    <div class="num accent">$99/mo</div>
+    <div class="note">Flat. Exclusive routing. Every request goes straight to you.</div>
+  </div>
+</div>
+
+<!-- ── TWO-COLUMN: BENEFITS + OBJECTIONS ───────────── -->
+<div class="two-col">
+  <div class="benefits">
+    <h3>What $99/mo gets you</h3>
+    <ol>
+      <li><strong>"License verified" badge</strong> and an editable profile on a public URL you can link from your own site.</li>
+      <li><strong>Featured placement</strong> — first result when homeowners search for your trade in your city.</li>
+      <li><strong>Direct routed quote requests</strong> — human-reviewed, never shared with competitors.</li>
+      <li><strong>Cancel anytime</strong> — no contracts, no per-lead gambling, no surprise invoices.</li>
+    </ol>
+  </div>
+  <div class="objections">
+    <h3>The two objections — answered</h3>
+    <div class="obj-row">
+      <div class="obj-q">"I already use Angi / Thumbtack"</div>
+      <div class="obj-a">Keep them. We're flat-rate and exclusive. Run both for a month, then compare <strong>cost per won job</strong> — that's the only number that matters.</div>
+    </div>
+    <div class="obj-row">
+      <div class="obj-q">"I get enough work"</div>
+      <div class="obj-a">Take the free verified badge. It protects you when homeowners compare. Featured can wait until you want more volume.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CALLOUT ──────────────────────────────────────── -->
+<div class="callout">
+  <strong>First 5 contractors per market get 50% off the first month.</strong> Contact us at <a href="https://dwellgauge.com/get-listed">dwellgauge.com/get-listed</a> or reply to this email to claim your slot.
+</div>
+
+<!-- ── FOOTER ───────────────────────────────────────── -->
+<div class="footer">
+  <div>
+    Cost figures are public, well-documented ballpark ranges — not quotes from each platform. Reprint only as the ranges shown here.
+    <strong>DwellGauge never alters license status, source data, or modeled costs for paying partners.</strong>
+    Payment buys placement and routing priority only.
+  </div>
+  <div style="text-align: right;">
+    dwellgauge.com<br>
+    Florida pilot &middot; HVAC, roofing, plumbing, electrical
+  </div>
+</div>
+
+</body>
+</html>

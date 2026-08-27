@@ -1,0 +1,17 @@
+alter table if exists leads add column if not exists landing_path text;
+alter table if exists leads add column if not exists utm_source text;
+alter table if exists leads add column if not exists utm_medium text;
+alter table if exists leads add column if not exists utm_campaign text;
+alter table if exists leads add column if not exists assigned_contractor text;
+alter table if exists leads add column if not exists routed_at timestamptz;
+alter table if exists leads add column if not exists outcome text;
+alter table if exists leads add column if not exists revenue_cents integer;
+alter table if exists leads add column if not exists currency text default 'USD';
+alter table if exists leads add column if not exists outcome_at timestamptz;
+update leads set outcome = 'new' where outcome is null;
+alter table if exists leads drop constraint if exists leads_outcome_check;
+alter table if exists leads add constraint leads_outcome_check check (outcome in ('new','contacted','won','lost'));
+alter table if exists leads drop constraint if exists leads_revenue_cents_check;
+alter table if exists leads add constraint leads_revenue_cents_check check (revenue_cents is null or revenue_cents >= 0);
+create index if not exists leads_landing_path_idx on leads (landing_path);
+create index if not exists leads_outcome_idx on leads (outcome);

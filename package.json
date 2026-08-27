@@ -1,0 +1,43 @@
+{
+  "name": "dwellgauge-home-services",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "pipeline:wages": "tsx scripts/fetch-wages.ts",
+    "pipeline:permits": "tsx scripts/fetch-permits.ts",
+    "pipeline:licenses": "tsx scripts/sync-licenses.ts",
+    "pipeline:licenses-fl": "tsx scripts/sync-licenses-fl.ts",
+    "pipeline:compute": "tsx scripts/build-datasets.ts",
+    "pipeline:validate": "tsx scripts/validate-datasets.ts",
+    "launch:check": "tsx scripts/launch-readiness.ts",
+    "pipeline:validate-states": "tsx scripts/validate-state-sources.ts",
+    "pilot:export-prospects": "tsx scripts/export-florida-prospects.ts",
+    "db:import-florida": "tsx scripts/import-florida-postgres.ts"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "next": "^15.3.4",
+    "pg": "^8.16.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.25.56"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "@types/node": "^22.15.29",
+    "@types/pg": "^8.11.14",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "fflate": "^0.8.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.8",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.2"
+  }
+}

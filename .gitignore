@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+data/raw-cache/*
+!data/raw-cache/.gitkeep
+data/runtime/*
+!data/runtime/.gitkeep
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store

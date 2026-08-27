@@ -1,0 +1,12 @@
+{
+  "note": "Configure this file through PERMITS_SOURCE_CONFIG only after confirming the official jurisdiction dataset, terms, field names, and republication rights.",
+  "example": {
+    "url": "https://data.example.gov/resource/abcd-1234.json",
+    "source": "Official city or county permit portal",
+    "jurisdictionField": "city",
+    "dateField": "issued_date",
+    "typeField": "permit_type",
+    "amountField": "permit_fee",
+    "allowedTypes": ["mechanical", "roof", "plumbing", "electrical"]
+  }
+}

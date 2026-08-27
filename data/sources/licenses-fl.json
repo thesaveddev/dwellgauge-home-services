@@ -1,0 +1,31 @@
+{
+  "source": "Florida Department of Business and Professional Regulation (DBPR) — Construction Industry Licensing Board",
+  "homepage": "https://www2.myfloridalicense.com/construction-industry/public-records/",
+  "note": "DBPR publishes zipped CSV 'license data files'. Set FL_LICENSE_DATA_URL (direct zip or CSV link) or fill urls[] below with the current CILB download link. URLs change occasionally; updating them here requires no code changes.",
+  "urls": ["https://www2.myfloridalicense.com/sto/file_download/extracts/CONSTRUCTIONLICENSE_1.csv", "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv"],
+  "classificationTerms": {
+    "hvac": ["air conditioning", "mechanical contractor"],
+    "plumbing": ["plumbing contractor", "master plumber"],
+    "electrical": ["electrical contractor"],
+    "roofing": ["roofing contractor"]
+  },
+  "licensePrefixes": {
+    "CAC": "hvac",
+    "CFC": "plumbing",
+    "EC": "electrical",
+    "CCC": "roofing",
+    "CRC": "roofing"
+  },
+  "headerAliases": {
+    "licenseNumber": ["license number", "license no", "lic number", "licensenumber", "license #", "license"],
+    "businessName": ["license name", "licensee name", "business name", "name", "entity name", "business legal name", "doing business as name"],
+    "classification": ["license type", "class code", "description"],
+    "status": ["status", "license status"],
+    "issuedAt": ["issued date", "date issued", "orig issue date", "issue date"],
+    "expiresAt": ["expires date", "expiration date", "expiry date", "expire date", "renewal date"],
+    "county": ["county", "county name", "county code"],
+    "city": ["city", "mail city", "business city", "city, state, zip"]
+  },
+  "activeStatusValues": ["active", "current", "clear", "licensed"],
+  "maxRecords": 50000
+}

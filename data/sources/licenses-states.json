@@ -1,0 +1,82 @@
+{
+  "states": [
+    {
+      "code": "FL",
+      "name": "Florida",
+      "authority": "Florida Department of Business and Professional Regulation — Construction Industry Licensing Board",
+      "authorityUrl": "https://www2.myfloridalicense.com/construction-industry/public-records/",
+      "access": "official-download",
+      "downloadUrl": "https://www2.myfloridalicense.com/sto/file_download/extracts/CONSTRUCTIONLICENSE_1.csv",
+      "termsUrl": "https://www2.myfloridalicense.com/construction-industry/public-records/",
+      "cadence": "operator-verified; refresh target every 45 days",
+      "adapter": "florida-dbpr",
+      "status": "live",
+      "notes": "Official CSV imported and validated. Confirm republication terms and source availability before every refresh."
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "authority": "Texas Department of Licensing and Regulation",
+      "authorityUrl": "https://www.tdlr.texas.gov/LicenseSearch/",
+      "access": "public-search; bulk-feed-not-configured",
+      "downloadUrl": null,
+      "termsUrl": "https://www.tdlr.texas.gov/",
+      "cadence": "to be confirmed with TDLR",
+      "adapter": "pending-authorized-feed",
+      "status": "planned",
+      "notes": "Do not scrape or publish records until an allowed feed, export, or written permission is confirmed."
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "authority": "California Contractors State License Board",
+      "authorityUrl": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx",
+      "access": "public-search; bulk-feed-not-configured",
+      "downloadUrl": null,
+      "termsUrl": "https://www.cslb.ca.gov/About_Us/",
+      "cadence": "to be confirmed with CSLB",
+      "adapter": "pending-authorized-feed",
+      "status": "planned",
+      "notes": "Confirm CSLB data-use terms and an approved access method before ingestion."
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "authority": "New York Department of State, Division of Licensing Services",
+      "authorityUrl": "https://dos.ny.gov/professional-licensing",
+      "access": "public-search; local-jurisdiction-fragmented",
+      "downloadUrl": null,
+      "termsUrl": "https://dos.ny.gov/",
+      "cadence": "to be confirmed by license category and jurisdiction",
+      "adapter": "pending-authorized-feed",
+      "status": "planned",
+      "notes": "New York contractor licensing is fragmented; identify the exact trade and local authority before building an adapter."
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "authority": "Georgia Secretary of State, Professional Licensing Boards Division",
+      "authorityUrl": "https://sos.ga.gov/professional-licensing-boards",
+      "access": "public-search; bulk-feed-not-configured",
+      "downloadUrl": null,
+      "termsUrl": "https://sos.ga.gov/",
+      "cadence": "to be confirmed with the relevant board",
+      "adapter": "pending-authorized-feed",
+      "status": "planned",
+      "notes": "Confirm board-specific categories, access limits, and republication terms."
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "authority": "North Carolina Licensing Board for General Contractors",
+      "authorityUrl": "https://nclbgc.org/",
+      "access": "public-search; bulk-feed-not-configured",
+      "downloadUrl": null,
+      "termsUrl": "https://nclbgc.org/",
+      "cadence": "to be confirmed with NCLBGC",
+      "adapter": "pending-authorized-feed",
+      "status": "planned",
+      "notes": "Confirm which license classes map to the product trades and obtain an allowed export or API."
+    }
+  ]
+}

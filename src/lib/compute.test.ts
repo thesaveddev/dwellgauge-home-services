@@ -1,0 +1,4 @@
+import { describe, expect, it } from "vitest";
+import { computeCostEstimate } from "./compute";
+const benchmark = { low: 1, median: 10000, high: 2, unit: "project", basis: "test" };
+describe("computeCostEstimate", () => { it("applies local adjustments and rounds ranges", () => { const result = computeCostEstimate({ benchmark, laborShare: .5, materialsShare: .3, overheadShare: .2, wageRatio: 1.1, materialsFactor: 1.05, pre1980Share: .5, climateModifier: .02, permitFee: 125 }); expect(result.median).toBe(11650); expect(result.low % 50).toBe(0); expect(result.high % 50).toBe(0); }); it("clamps extreme wage inputs", () => { const result = computeCostEstimate({ benchmark, laborShare: 1, materialsShare: 0, overheadShare: 0, wageRatio: 9, materialsFactor: 1, permitFee: 0 }); expect(result.median).toBe(15000); }); });

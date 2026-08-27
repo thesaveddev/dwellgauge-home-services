@@ -1,0 +1,48 @@
+name: Data refresh
+on:
+  schedule:
+    - cron: "17 5 1 * *"
+  workflow_dispatch:
+    inputs:
+      refresh_florida:
+        description: "Attempt the Florida DBPR download"
+        required: false
+        default: false
+        type: boolean
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Refresh BLS wages
+        env:
+          BLS_OEWS_METRO_URL: ${{ secrets.BLS_OEWS_METRO_URL }}
+          BLS_OEWS_NATIONAL_URL: ${{ secrets.BLS_OEWS_NATIONAL_URL }}
+        run: npm run pipeline:wages
+      - name: Refresh official permits
+        env:
+          PERMITS_SOCRATA_URL: ${{ secrets.PERMITS_SOCRATA_URL }}
+          PERMITS_SOURCE_CONFIG: ${{ secrets.PERMITS_SOURCE_CONFIG }}
+        run: npm run pipeline:permits
+      - run: npm run pipeline:compute
+      - name: Validate generated datasets
+        run: npm run pipeline:validate
+      - name: Refresh Florida licenses
+        if: ${{ inputs.refresh_florida == true }}
+        env:
+          FL_LICENSE_DATA_URL: ${{ secrets.FL_LICENSE_DATA_URL }}
+        run: npm run pipeline:licenses-fl
+      - name: Upload generated datasets
+        uses: actions/upload-artifact@v4
+        with:
+          name: dwellgauge-generated-${{ github.run_id }}
+          path: |
+            data/generated/*.json
+            data/licenses/fl.json
+          if-no-files-found: warn
+          retention-days: 30

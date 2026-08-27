@@ -1,0 +1,161 @@
+{
+  "trades": [
+    {
+      "slug": "hvac",
+      "name": "HVAC",
+      "tagline": "Heating & cooling installation, replacement, and repair",
+      "blsOccupation": "499021",
+      "blsOccupationName": "HVAC mechanics and installers"
+    },
+    {
+      "slug": "roofing",
+      "name": "Roofing",
+      "tagline": "Roof replacement, repair, and inspection",
+      "blsOccupation": "472181",
+      "blsOccupationName": "Roofers"
+    },
+    {
+      "slug": "plumbing",
+      "name": "Plumbing",
+      "tagline": "Repipes, water heaters, and major repairs",
+      "blsOccupation": "472152",
+      "blsOccupationName": "Plumbers, pipefitters, and steamfitters"
+    },
+    {
+      "slug": "electrical",
+      "name": "Electrical",
+      "tagline": "Panel upgrades, rewiring, and EV charger circuits",
+      "blsOccupation": "472111",
+      "blsOccupationName": "Electricians"
+    },
+    {
+      "slug": "painting",
+      "name": "Painting",
+      "tagline": "Interior and exterior painting projects",
+      "blsOccupation": "472141",
+      "blsOccupationName": "Painters, construction and maintenance"
+    }
+  ],
+  "services": [
+    {
+      "slug": "hvac-replacement",
+      "name": "HVAC system replacement",
+      "tradeSlug": "hvac",
+      "shortName": "HVAC replacement",
+      "description": "Full replacement of a central air conditioner and furnace (or air handler) in a typical single-family home. Includes equipment removal, new system installation, line set replacement where needed, and startup commissioning.",
+      "benchmark": { "low": 6500, "median": 9800, "high": 14500, "unit": "project", "basis": "3-ton, 14.3 SEER2 system installed" },
+      "laborShare": 0.45,
+      "materialsShare": 0.5,
+      "overheadShare": 0.05,
+      "durationDays": "1-3 days",
+      "permitTypical": true,
+      "climateSensitive": true,
+      "sources": [
+        { "label": "Angi / HomeAdvisor national cost guides (2025)", "url": "https://www.angi.com/articles/how-much-does-hvac-installation-cost.htm" },
+        { "label": "BLS OEWS occupation 49-9021 wage data", "url": "https://www.bls.gov/oes/" }
+      ],
+      "faqs": [
+        { "q": "How long does an HVAC replacement take?", "a": "Most straight swaps are done in one day; systems requiring duct modifications, line set replacement, or crane access typically take two to three days." },
+        { "q": "Does replacing my HVAC require a permit?", "a": "In nearly all US jurisdictions yes - mechanical and often electrical permits are required, and the final inspection protects your warranty and resale value." },
+        { "q": "What size system do I need?", "a": "Sizing should come from a Manual J load calculation based on your home's square footage, insulation, windows, and climate zone - not from the old unit's tonnage." },
+        { "q": "Is it cheaper to replace AC and furnace together?", "a": "Usually yes: combined replacement avoids duplicate labor and guarantees matched efficiency between components. Expect 10-20% savings versus separate replacements." }
+      ]
+    },
+    {
+      "slug": "roof-replacement",
+      "name": "Roof replacement (asphalt shingle)",
+      "tradeSlug": "roofing",
+      "shortName": "Roof replacement",
+      "description": "Complete tear-off and replacement of asphalt shingle roofing on a roughly 2,000 sq ft single-family home, including underlayment, flashing, and disposal.",
+      "benchmark": { "low": 9000, "median": 13500, "high": 22000, "unit": "project", "basis": "~20 squares architectural shingles, moderate pitch" },
+      "laborShare": 0.55,
+      "materialsShare": 0.38,
+      "overheadShare": 0.07,
+      "durationDays": "1-3 days",
+      "permitTypical": true,
+      "climateSensitive": false,
+      "sources": [
+        { "label": "Remodeling Magazine Cost vs. Value Report", "url": "https://www.remodeling.hw.net/cost-vs-value/2025/" },
+        { "label": "BLS OEWS occupation 47-2181 wage data", "url": "https://www.bls.gov/oes/" }
+      ],
+      "faqs": [
+        { "q": "How much does roof replacement cost per square?", "a": "Architectural asphalt shingle runs roughly $450-$700 per square (100 sq ft) installed in most metros, with steep pitches, multiple layers, or complex roofs pushing higher." },
+        { "q": "Do I need a permit to replace my roof?", "a": "Most cities and counties require a re-roof permit. It is usually pulled by your contractor and verified at final inspection." },
+        { "q": "Can you replace a roof in winter?", "a": "Yes in most climates - shingles need only adequate sealing temperatures during installation. Expect slightly longer scheduling in cold regions." },
+        { "q": "Will insurance pay for roof replacement?", "a": "Only for covered perils like storm or hail damage, subject to your policy's roof schedule and age rules. Wear-and-tear replacement is not covered." }
+      ]
+    },
+    {
+      "slug": "whole-home-repipe",
+      "name": "Whole-home repipe",
+      "tradeSlug": "plumbing",
+      "shortName": "Repipe",
+      "description": "Replacement of supply lines throughout a home, typically PEX for a 1,500-2,500 sq ft house with two bathrooms. Includes drywall patching at access points.",
+      "benchmark": { "low": 5500, "median": 8200, "high": 12500, "unit": "project", "basis": "PEX repipe, ~2 bath home" },
+      "laborShare": 0.6,
+      "materialsShare": 0.33,
+      "overheadShare": 0.07,
+      "durationDays": "2-5 days",
+      "permitTypical": true,
+      "climateSensitive": false,
+      "sources": [
+        { "label": "HomeGuide / Angi repipe cost guides (2025)", "url": "https://homeguide.com/costs/repipe-house-cost" },
+        { "label": "BLS OEWS occupation 47-2152 wage data", "url": "https://www.bls.gov/oes/" }
+      ],
+      "faqs": [
+        { "q": "Is PEX or copper better for a repipe?", "a": "PEX costs 30-50% less and installs faster; copper lasts longer and adds resale value. Most whole-home repipes now use PEX-A with manifold systems." },
+        { "q": "Do plumbers need to open walls?", "a": "Access holes are cut at fixture connections and run points. Repiping companies include patching, though repaint is typically left to the homeowner." },
+        { "q": "What triggers a repipe vs repair?", "a": "Recurring leaks, polybutylene piping, galvanized corrosion, or slab leak history. If you have had two or more pinhole leaks, replacement is usually cheaper long term." },
+        { "q": "Is a repipe permit required?", "a": "Yes everywhere - plumbing work on supply lines must be permitted and inspected before walls are closed." }
+      ]
+    },
+    {
+      "slug": "electrical-panel-upgrade",
+      "name": "Electrical panel upgrade (200A)",
+      "tradeSlug": "electrical",
+      "shortName": "Panel upgrade",
+      "description": "Upgrade of the main service panel from 100A or less to 200A, including meter base, grounding, utility coordination, and permit inspection.",
+      "benchmark": { "low": 2200, "median": 3400, "high": 5500, "unit": "project", "basis": "100Ato200A service upgrade" },
+      "laborShare": 0.5,
+      "materialsShare": 0.42,
+      "overheadShare": 0.08,
+      "durationDays": "4-8 hours",
+      "permitTypical": true,
+      "climateSensitive": false,
+      "sources": [
+        { "label": "HomeGuide panel upgrade cost guide (2025)", "url": "https://homeguide.com/costs/electrical-panel-replacement-cost" },
+        { "label": "BLS OEWS occupation 47-2111 wage data", "url": "https://www.bls.gov/oes/" }
+      ],
+      "faqs": [
+        { "q": "Why upgrade to 200 amps?", "a": "Modern homes with heat pumps, EV chargers, or induction ranges routinely exceed 100A service capacity. Utilities also commonly require 200A for solar interconnection." },
+        { "q": "How long is the power out?", "a": "Typically four to eight hours while the utility disconnects and reconnects service. Your electrician coordinates the utility appointment." },
+        { "q": "Does the utility charge for this?", "a": "Many utilities charge a service-upgrade fee ($100-$600) that is separate from your electrician's quote - ask whether it is included." },
+        { "q": "Do I need a permit?", "a": "Always. Panel work touches the service entrance and must be inspected; unpermitted work can block home sales and void insurance claims." }
+      ]
+    },
+    {
+      "slug": "interior-painting",
+      "name": "Interior painting (whole home)",
+      "tradeSlug": "painting",
+      "shortName": "Interior painting",
+      "description": "Two-coat premium acrylic repaint of walls, ceilings, and trim in a roughly 2,000 sq ft home including prep, masking, and cleanup.",
+      "benchmark": { "low": 3800, "median": 5600, "high": 8500, "unit": "project", "basis": "~2,000 sq ft interior, walls + trim" },
+      "laborShare": 0.7,
+      "materialsShare": 0.24,
+      "overheadShare": 0.06,
+      "durationDays": "3-5 days",
+      "permitTypical": false,
+      "climateSensitive": false,
+      "sources": [
+        { "label": "Angi / HomeAdvisor painting cost guides (2025)", "url": "https://www.angi.com/articles/how-much-does-it-cost-to-paint-a-house.htm" },
+        { "label": "BLS OEWS occupation 47-2141 wage data", "url": "https://www.bls.gov/oes/" }
+      ],
+      "faqs": [
+        { "q": "How do painters price jobs?", "a": "Most quote per square foot of floor area ($1.90-$3.50) or per room. Height, trim density, and repair work move quotes up from the base rate." },
+        { "q": "Does painting require a permit?", "a": "No - cosmetic painting does not require permits anywhere in the US." },
+        { "q": "Should I buy the paint myself?", "a": "Let the contractor supply it: pros get trade discounts that offset their margin, and they warranty coverage and finish quality only when materials are theirs." },
+        { "q": "When is exterior season?", "a": "Exterior paint needs surfaces above ~50°F overnight. In cold-winter states exterior work concentrates April-October; interiors are year-round." }
+      ]
+    }
+  ]
+}
