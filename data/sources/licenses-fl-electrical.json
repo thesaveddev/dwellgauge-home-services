@@ -1,0 +1,19 @@
+{
+  "source": "Florida Department of Business and Professional Regulation (DBPR) — Electrical Contractors' Licensing Board",
+  "homepage": "https://www2.myfloridalicense.com/electrical-contractors/",
+  "publicRecordsUrl": "https://www2.myfloridalicense.com/construction-industry/public-records/",
+  "note": "Download the current electrical license export from the official DBPR public-records/download page and set FL_ELECTRICAL_DATA_FILE. This adapter refuses missing or empty files and never publishes synthetic electrical records.",
+  "licensePrefixes": ["EC", "ER"],
+  "headerAliases": {
+    "licenseNumber": ["license number", "license no", "lic number", "license #", "license", "credential number"],
+    "businessName": ["licensee name", "business name", "name", "entity name", "legal name", "organization name"],
+    "classification": ["license type", "license category", "class code", "description", "type"],
+    "status": ["status", "license status", "primary status"],
+    "issuedAt": ["original issue date", "orig issue date", "issued date", "date issued", "issue date"],
+    "expiresAt": ["expiration date", "expires date", "expiry date", "renewal date"],
+    "city": ["city", "mail city", "business city", "city, state, zip"],
+    "county": ["county", "county name"]
+  },
+  "activeStatusValues": ["active", "current", "clear", "licensed"],
+  "maxRecords": 300000
+}

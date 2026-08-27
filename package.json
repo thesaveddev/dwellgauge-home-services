@@ -17,7 +17,8 @@
     "launch:check": "tsx scripts/launch-readiness.ts",
     "pipeline:validate-states": "tsx scripts/validate-state-sources.ts",
     "pilot:export-prospects": "tsx scripts/export-florida-prospects.ts",
-    "db:import-florida": "tsx scripts/import-florida-postgres.ts"
+    "db:import-florida": "tsx scripts/import-florida-postgres.ts",
+    "pipeline:licenses-fl-electrical": "tsx scripts/sync-licenses-fl-electrical.ts"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
