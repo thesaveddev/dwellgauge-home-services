@@ -1,0 +1,29 @@
+# Gitleaks configuration for DwellGauge
+# Extends default ruleset, adds allowlist for non-secret values used in deploy scripts.
+
+title = "DwellGauge secret scanning"
+
+[extend]
+# Start from the built-in default rules
+useDefault = true
+
+[allowlist]
+description = "Allowlisted patterns that are not real secrets"
+
+# VPS IP address used in deployment scripts (not a secret, it's a public endpoint)
+regexes = [
+  '''158\.69\.221\.87''',
+]
+
+# Deploy bootstrap password (placeholder, replaced on first login)
+paths = [
+  '''deploy/.*\.sh''',
+  '''\.env\.production''',
+  '''\.env\.example''',
+  '''deploy/DEPLOY\.md''',
+]
+
+# Specific file patterns to skip
+[[allowlist.commits]]
+# Allow commits that only touch deploy scripts
+regex = '''deploy/.*'''

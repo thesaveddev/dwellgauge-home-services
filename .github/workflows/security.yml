@@ -1,9 +1,21 @@
 name: Security
+
 on:
   push:
+    branches: [master]
   pull_request:
+    branches: [master]
+  schedule:
+    # Weekly scan every Monday at 09:00 UTC
+    - cron: "0 9 * * 1"
+
+permissions:
+  contents: read
+  security-events: write  # Required for CodeQL + gitleaks to upload SARIF results
+
 jobs:
-  audit:
+  npm-audit:
+    name: Dependency audit
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -14,14 +26,49 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm audit --audit-level=high || echo 'Audit issues found (non-blocking for now)'
-      - name: Secret scan
+      - name: Run npm audit
+        run: npm audit --audit-level=high --json || true
+
+  secret-scan:
+    name: Secret scanning (gitleaks)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write  # Upload SARIF to GitHub Security tab
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for baseline comparison
+      - name: gitleaks
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: CodeQL initialization
+          GITLEAKS_ENABLE_COMMENTS: true
+          GITLEAKS_ENABLE_UPLOAD: true
+          GITLEAKS_CONFIG: .gitleaks.toml
+
+  codeql:
+    name: CodeQL analysis
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write  # Upload SARIF to GitHub Security tab
+      actions: read  # For baseline interpretation
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [javascript-typescript]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: javascript-typescript
-      - name: CodeQL analysis
+          languages: ${{ matrix.language }}
+          # Use default security-and-quality query suite
+          queries: security-extended
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+      - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"
